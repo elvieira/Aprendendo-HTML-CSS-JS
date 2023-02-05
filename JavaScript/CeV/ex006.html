@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        div#area {
+            background-color: rebeccapurple;
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            line-height: 30px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+    <p>Aprendendo JavaScript com o Curso em Vídeo!</p>
+    <br>
+    <h2>Iniciando estudos DOM</h2>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="area" onclick="clicar()">Clique em mim</div>
+    <script>
+        var mouPas = document.querySelector("div#area");
+        mouPas.addEventListener("mouseenter", entrar);
+        mouPas.addEventListener("mouseout", sair);
+
+        function clicar(){
+            var ar = document.querySelector("div#area");
+            if (ar.innerHTML === "Clicou!") {
+                ar.innerHTML = "Clique em mim";
+            } else {
+                ar.innerHTML = "Clicou!";
+            }
+        }
+        function entrar(){
+            mouPas.style.backgroundColor = "rgb(140, 51, 153)";
+        }
+        function sair(){
+            mouPas.style.backgroundColor = "rebeccapurple";
+        }
+    </script>
+</body>
+</html>

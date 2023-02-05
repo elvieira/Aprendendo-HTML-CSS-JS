@@ -1,0 +1,45 @@
+body {
+    background-color: blueviolet;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: large;
+}
+section {
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px black;
+    margin: auto;
+}
+div.val {
+    text-align: end;
+    margin: auto;
+    width: 144px;
+    padding-top: 20px;
+}
+div.val input {
+    width: 75px;
+}
+div#res {
+    padding-bottom: 20px;
+}
+button {
+    width: 100px;
+    height: 30px;
+    margin: 30px;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: rgb(100, 0, 193);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+button:active {
+    filter: brightness(0.8);
+}

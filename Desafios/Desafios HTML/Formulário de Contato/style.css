@@ -1,0 +1,45 @@
+* {
+    display: block;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+title {
+    display: none;
+}
+
+.item_assunto, .item_nome, .item_email, .item_mensagem, .item_checkbox, .item_button {
+    padding: 5px 0px 15px 0px;
+}
+
+.item_assunto label, .item_assunto select, .item_checkbox label, .item_checkbox input {
+    display: inline;
+}
+
+legend {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.item_checkbox label {
+    font-weight: normal;
+    font-size: small;
+}
+
+.item_nome input, .item_email input {
+    font-size: small;
+    width: 200px;
+    height: 25px;
+}
+
+.item_mensagem textarea {
+    font-size: small;
+    width: 300px;
+    height: 300px;
+    resize: none;
+}

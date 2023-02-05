@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        input.verify {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+    <p>Aprendendo JavaScript com o Curso em Vídeo!</p>
+    <br>
+    <h2>Iniciando estudos DOM</h2>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <br>
+    <h2>Verificador de multas</h2>
+    <p>Digite a velocidade máxima permitida na via:</p>
+    <input type="number" name="viakm" id="viakm" style="width: 50px;">
+    <span>km/h</span>
+    <p>Digite a velocidade do carro:</p>
+    <input type="number" name="carkm" id="carkm" style="width: 50px;">
+    <span>km/h</span>
+    <input type="button" class="verify" value="Verificar" onclick="verify()">
+    <div id="result"></div>
+    <script>
+        function verify(){
+            var viakmh = Number(document.querySelector("#viakm").value);
+            var carkmh = Number(document.querySelector("#carkm").value);
+            var pResult = document.querySelector("#result");
+            if (carkmh === 0 || viakmh === 0) {
+                pResult.innerHTML = `Digite algum valor nos campos acima!`
+            } else if (carkmh > viakmh) {
+                pResult.innerHTML = `Você ultrapassou a velocidade máxima permitida e foi multado!`
+            } else {
+                pResult.innerHTML = `Você estava abaixo da velocidade máxima permitida, fique tranquilo!`
+            }
+        }
+    </script>
+</body>
+</html>

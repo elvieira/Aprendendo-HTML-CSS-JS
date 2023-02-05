@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        p.somar {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+    <p>Aprendendo JavaScript com o Curso em Vídeo!</p>
+    <br>
+    <h2>Iniciando estudos DOM</h2>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <br>
+    <h2>Somando Valores</h2>
+    <input type="number" name="num1" id="num1">
+    <p class="somar">+</p>
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="result"></div>
+    <script>
+        function somar(){
+            var num1 = document.querySelector("#num1");
+            var num2 = document.querySelector("#num2");
+            var n1 = Number(num1.value);
+            var n2 = Number(num2.value);
+            result = document.querySelector("div#result");
+            if (n1 === 0 || n2 === 0) {
+                result.innerHTML = "Coloque os dois valores";
+            } else {
+                result.innerHTML = `O resultado é <strong>${n1 + n2}</strong>`;
+            }
+        }
+    </script>
+</body>
+</html>
